@@ -1,0 +1,19 @@
+# Codeception Test Suite Configuration
+#
+# Suite for acceptance tests.
+# Perform tests in browser using the WebDriver or PhpBrowser.
+# If you need both WebDriver and PHPBrowser tests - create a separate suite.
+
+actor: AcceptanceTester
+modules:
+       enabled:
+          - WebDriver:
+             url: 'https://staging-ap01-livingedge.demandware.net/s/LivingEdge'
+             
+             window_size: false # disabled in ChromeDriver
+             port: 9515
+             browser: chrome
+             
+             log_js_errors: true
+       
+      
